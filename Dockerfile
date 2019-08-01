@@ -46,7 +46,8 @@ RUN set -eux; \
 	rm docker.tgz; \
 	\
 	dockerd --version; \
-	docker --version
+	docker --version; \
+	echo $PATH
 
 COPY modprobe.sh /usr/local/bin/modprobe
 COPY docker-entrypoint.sh /usr/local/bin/
