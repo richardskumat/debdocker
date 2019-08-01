@@ -4,7 +4,7 @@ services: docker
 env:
   global:
     - DOCKER_USER: qwe1
-    - DOCKER_IMAGE: dind-ansible-molecule
+    - DOCKER_IMAGE: debdocker
   #matrix:
   #  - whatever
 
@@ -16,5 +16,5 @@ script:
   - docker build -t $DOCKER_USER/$DOCKER_IMAGE:travis-$DOCKER_IMAGE .
   - docker images
   - docker run $DOCKER_USER/$DOCKER_IMAGE:travis-$DOCKER_IMAGE cat /etc/os-release
-  - docker run $DOCKER_USER/$DOCKER_IMAGE:latest ansible --version
-  - docker run $DOCKER_USER/$DOCKER_IMAGE:latest molecule --version
+  - docker run $DOCKER_USER/$DOCKER_IMAGE:latest docker info
+  - docker run $DOCKER_USER/$DOCKER_IMAGE:latest docker version
