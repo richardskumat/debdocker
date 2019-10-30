@@ -18,6 +18,5 @@ script:
   # Run tests.
   - docker build -t $DOCKER_USER/$DOCKER_IMAGE:travis-$DOCKER_IMAGE .
   - docker images
-  - docker run --rm $DOCKER_USER/$DOCKER_IMAGE:travis-$DOCKER_IMAGE docker info
-  - docker run --rm $DOCKER_USER/$DOCKER_IMAGE:latest docker info
-  - docker run --rm $GITLAB_REG_URL/$GITLAB_REG_USER/$GITLAB_REG_IMAGE:latest docker info
+  - docker run --rm $DOCKER_USER/$DOCKER_IMAGE:latest docker --version
+  - docker run --rm $GITLAB_REG_URL/$GITLAB_REG_USER/$GITLAB_REG_IMAGE:latest docker --version
