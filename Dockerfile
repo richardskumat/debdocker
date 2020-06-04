@@ -52,6 +52,8 @@ COPY modprobe.sh /usr/local/bin/modprobe
 COPY docker-entrypoint.sh /usr/local/bin/
 
 RUN apt-get purge --auto-remove wget -y && \
+	chmod 0755 /usr/local/bin/docker-entrypoint.sh \
+	/usr/local/bin/modprobe && \
 	rm -rf /var/lib/apt/lists/* && apt-get clean
 
 # https://github.com/docker-library/docker/pull/166
@@ -61,4 +63,4 @@ RUN apt-get purge --auto-remove wget -y && \
 ENV DOCKER_TLS_CERTDIR=/certs
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["sh"]
+CMD ["bash"]
