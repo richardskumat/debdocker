@@ -13,6 +13,11 @@ run on armhf, aarch64(32 or 64 bit arm).
 
 This image serves as a base for qwe1/dind-ansible-molecule to build from.
 
+## Purpose of this image
+
+Serves as a base image for my own use
+and for Gitlab CI usage.
+
 ## Links to source code and build logs
 
 Gitlab
