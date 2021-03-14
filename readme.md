@@ -6,7 +6,7 @@ I decided to build this image because I've had some python issues due to upstrea
 docker:stable being an Alpine image while doing molecule tests
 on my Ansible roles.
 
-Based on docker:stable, https://github.com/docker-library/docker/tree/master/19.03.
+Based on docker:stable, https://github.com/docker-library/docker/blob/master/20.10/Dockerfile.
 
 Compared to docker:stable, this image is only built for x64/amd64, so it won't
 run on armhf, aarch64(32 or 64 bit arm).
