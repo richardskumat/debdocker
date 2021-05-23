@@ -32,10 +32,6 @@ Github
 
 https://github.com/richardskumat/debdocker
 
-Travis
-
-https://travis-ci.org/richardskumat/debdocker
-
 Dockerhub
 
 https://hub.docker.com/r/qwe1/debdocker
