@@ -44,9 +44,6 @@ push_to_dockerhub:
    - docker push $DOCKERHUB_USER/$DOCKERHUB_PROJECT:$CI_COMMIT_SHA
    - docker push $DOCKERHUB_USER/$DOCKERHUB_PROJECT:$DOCKER_VERSION
    - echo "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" "$CI_REGISTRY" --password-stdin
-   - docker push $CI_REGISTRY_IMAGE:latest
-   - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
-   - docker push $CI_REGISTRY_IMAGE:$DOCKER_VERSION
 
 test_dockerhub_image:
   stage: test
@@ -54,4 +51,3 @@ test_dockerhub_image:
    - master
   script:
     - docker run --rm $DOCKERHUB_USER/$DOCKERHUB_PROJECT:$CI_COMMIT_SHA docker --version
-    - docker run --rm $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA docker --version
