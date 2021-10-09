@@ -1,4 +1,4 @@
-image: docker:stable
+image: docker:20.10
 
 variables:
   # https://about.gitlab.com/blog/2019/07/31/docker-in-docker-with-docker-19-dot-03/
@@ -10,7 +10,7 @@ variables:
   DOCKER_TLS_CERTDIR: "/certs"
 
 services:
-  - name: docker:dind
+  - name: docker:20.10
     # https://forum.gitlab.com/t/docker-dind-stops-working-after-12-1-0-update/28664/2
     # entrypoint: ["env", "-u", "DOCKER_HOST"]
     # command: ["dockerd-entrypoint.sh"]
