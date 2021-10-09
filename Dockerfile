@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM debian:bullseye-slim
 
 RUN apt-get update && apt-get upgrade -y && \
 	apt-get install ca-certificates tar wget --no-install-recommends -y
