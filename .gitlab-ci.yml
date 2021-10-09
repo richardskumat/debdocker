@@ -10,7 +10,7 @@ variables:
   DOCKER_TLS_CERTDIR: "/certs"
 
 services:
-  - name: docker:20.10
+  - name: docker:20.10-dind
     # https://forum.gitlab.com/t/docker-dind-stops-working-after-12-1-0-update/28664/2
     # entrypoint: ["env", "-u", "DOCKER_HOST"]
     # command: ["dockerd-entrypoint.sh"]
