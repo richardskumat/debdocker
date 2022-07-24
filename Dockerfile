@@ -49,8 +49,7 @@ RUN set -eux; \
 COPY modprobe.sh /usr/local/bin/modprobe
 COPY docker-entrypoint.sh /usr/local/bin/
 
-RUN apt-get purge --auto-remove wget -y && \
-	chmod 0755 /usr/local/bin/docker-entrypoint.sh \
+RUN chmod 0755 /usr/local/bin/docker-entrypoint.sh \
 	/usr/local/bin/modprobe && \
 	rm -rf /var/lib/apt/lists/* && apt-get clean
 
