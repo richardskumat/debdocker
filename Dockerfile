@@ -25,7 +25,7 @@ RUN set -eux; \
 		'armhf') \
 			url="https://download.docker.com/linux/static/stable/armel/docker-${DOCKER_VERSION}.tgz"; \
 			;; \
-		'armv7') \
+		'armv7l') \
 			url="https://download.docker.com/linux/static/stable/armhf/docker-${DOCKER_VERSION}.tgz"; \
 			;; \
 		'aarch64') \
