@@ -13,6 +13,12 @@ run on armhf, aarch64(32 or 64 bit arm).
 
 This image serves as a base for qwe1/dind-ansible-molecule to build from.
 
+
+## add
+
+https://download.docker.com/linux/raspbian/dists/bullseye/pool/stable/armhf/
+
+look at link above for armv7 docker binaries, which seem to work on rpi2 &rpi 3 for the moment
 ## Purpose of this image
 
 Serves as a base image for my own use
