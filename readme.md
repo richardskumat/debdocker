@@ -6,7 +6,7 @@ I decided to build this image because I've had some python issues due to upstrea
 docker:stable being an Alpine image while doing molecule tests
 on my Ansible roles.
 
-Based on docker:stable, https://github.com/docker-library/docker/blob/master/20.10/Dockerfile.
+Based on docker:stable, https://github.com/docker-library/docker/.
 
 Compared to docker:stable, this image is only built for amd64 and armv8, so it won't
 run on armhf.
@@ -14,6 +14,8 @@ run on armhf.
 This image serves as a base for qwe1/dind-ansible-molecule to build from.
 
 I could try to add a Raspbian armhf image with docker installed in it later.
+
+Might use https://hub.docker.com/r/balenalib/rpi-raspbian as Raspbian base image.
 
 ## add maybe
 
