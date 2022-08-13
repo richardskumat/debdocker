@@ -8,17 +8,19 @@ on my Ansible roles.
 
 Based on docker:stable, https://github.com/docker-library/docker/blob/master/20.10/Dockerfile.
 
-Compared to docker:stable, this image is only built for x64/amd64, so it won't
-run on armhf, aarch64(32 or 64 bit arm).
+Compared to docker:stable, this image is only built for amd64 and armv8, so it won't
+run on armhf.
 
 This image serves as a base for qwe1/dind-ansible-molecule to build from.
 
+I could try to add a Raspbian armhf image with docker installed in it later.
 
-## add
+## add maybe
 
 https://download.docker.com/linux/raspbian/dists/bullseye/pool/stable/armhf/
 
 look at link above for armv7 docker binaries, which seem to work on rpi2 &rpi 3 for the moment
+
 ## Purpose of this image
 
 Serves as a base image for my own use
