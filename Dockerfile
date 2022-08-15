@@ -1,7 +1,7 @@
 FROM docker:20.10-dind as dind
 RUN dockerd --version
 
-FROM debian:buster-slim
+FROM debian:bullseye-slim
 
 ENV DOCKER_RELEASE_VERSION 20.10
 ENV DOCKER_VERSION 20.10.17
