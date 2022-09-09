@@ -4,7 +4,7 @@ RUN dockerd --version
 FROM debian:bullseye-slim
 
 ENV DOCKER_RELEASE_VERSION 20.10
-ENV DOCKER_VERSION 20.10.17
+ENV DOCKER_VERSION 20.10.18
 
 COPY --from=dind /usr/local/bin/. /usr/local/bin
 
