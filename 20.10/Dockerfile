@@ -1,10 +1,10 @@
-FROM docker:23.00-dind as dind
+FROM docker:20.10-dind as dind
 RUN dockerd --version
 
 FROM debian:bullseye-slim
 
-ENV DOCKER_RELEASE_VERSION 23.0
-ENV DOCKER_VERSION 23.0.0
+ENV DOCKER_RELEASE_VERSION 20.10
+ENV DOCKER_VERSION 20.10.18
 
 COPY --from=dind /usr/local/bin/. /usr/local/bin
 
