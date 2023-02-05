@@ -1,4 +1,4 @@
-FROM docker:23.00-dind as dind
+FROM docker:23.0-dind as dind
 RUN dockerd --version
 
 FROM debian:bullseye-slim
