@@ -3,6 +3,7 @@
 image: docker.io/library/docker:23.0
 services:
   - name: docker.io/library/docker:23.0-dind
+    alias: docker
     # command: ["--experimental"]
     # https://forum.gitlab.com/t/docker-dind-stops-working-after-12-1-0-update/28664/2
     # entrypoint: ["env", "-u", "DOCKER_HOST"]
