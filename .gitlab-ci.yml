@@ -29,7 +29,7 @@ before_script:
   - "echo -e '{\n  \"experimental\": \"enabled\"\n}' | tee $HOME/.docker/config.json"
   # https://gitlab.com/richardskumat/playground/-/jobs/2762899800
   #- docker context create whatever
-  #- docker buildx create whatever
+  - docker buildx create whatever
   ##
   - docker buildx create --use --driver docker-container --name whatever --platform=linux/amd64,linux/arm/v7,linux/arm64
   - docker buildx inspect --bootstrap whatever
