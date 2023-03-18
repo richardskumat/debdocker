@@ -1,8 +1,8 @@
 ---
-#image: qwe1/debdocker:20.10
-image: crazymax/docker:latest
+#image: docker.io/qwe1/debdocker:20.10
+image: docker.io/crazymax/docker:latest
 services:
-  - name: docker:20.10-dind
+  - name: docker.io/library/docker:20.10-dind
     command: ["--experimental"]
     # https://forum.gitlab.com/t/docker-dind-stops-working-after-12-1-0-update/28664/2
     # entrypoint: ["env", "-u", "DOCKER_HOST"]

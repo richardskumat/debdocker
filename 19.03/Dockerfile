@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM docker.io/library/debian:buster-slim
 
 RUN apt-get update && apt-get upgrade -y && \
 	apt-get install ca-certificates tar wget --no-install-recommends -y

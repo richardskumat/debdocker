@@ -1,7 +1,7 @@
-FROM docker:23.0-dind as dind
+FROM docker.io/library/docker:23.0-dind as dind
 RUN dockerd --version
 
-FROM debian:bullseye-slim
+FROM docker.io/library/debian:bullseye-slim
 
 ENV DOCKER_RELEASE_VERSION 23.0
 ENV DOCKER_VERSION 23.0.1
