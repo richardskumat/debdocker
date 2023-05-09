@@ -4,7 +4,7 @@ RUN dockerd --version
 FROM docker.io/library/debian:bullseye-slim
 
 ENV DOCKER_RELEASE_VERSION 23.0
-ENV DOCKER_VERSION 23.0.5
+ENV DOCKER_VERSION 23.0.6
 
 COPY --from=dind /usr/local/bin/. /usr/local/bin
 
