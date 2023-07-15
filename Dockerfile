@@ -1,10 +1,10 @@
-FROM docker.io/library/docker:23.0-dind as dind
+FROM docker.io/library/docker:24.0-dind as dind
 RUN dockerd --version
 
-FROM docker.io/library/debian:bullseye-slim
+FROM docker.io/library/debian:bookworm-slim
 
-ENV DOCKER_RELEASE_VERSION 23.0
-ENV DOCKER_VERSION 23.0.6
+ENV DOCKER_RELEASE_VERSION 24.0
+ENV DOCKER_VERSION 24.0.4
 
 COPY --from=dind /usr/local/bin/. /usr/local/bin
 
