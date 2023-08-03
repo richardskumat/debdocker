@@ -3,7 +3,7 @@ FROM docker.io/library/docker:24.0-dind as dind
 FROM docker.io/library/debian:bookworm-slim
 
 ENV DOCKER_RELEASE_VERSION 24.0
-ENV DOCKER_VERSION 24.0.4
+ENV DOCKER_VERSION 24.0.5
 
 COPY --from=dind /usr/local/bin/. /usr/local/bin
 COPY --from=docker.io/docker/buildx-bin:v0.11 /buildx /usr/libexec/docker/cli-plugins/docker-buildx
