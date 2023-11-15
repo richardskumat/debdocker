@@ -9,7 +9,7 @@ COPY --from=dind /usr/local/bin/. /usr/local/bin
 COPY --from=docker.io/docker/buildx-bin:v0.11 /buildx /usr/libexec/docker/cli-plugins/docker-buildx
 
 RUN apt-get update && apt-get upgrade -y && \
-	apt-get install ca-certificates tar wget git --no-install-recommends -y
+	apt-get install ca-certificates tar wget --no-install-recommends -y
 
 RUN chmod 0755 /usr/local/bin/docker-entrypoint.sh \
 	/usr/local/bin/modprobe \
